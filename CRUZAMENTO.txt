@@ -1,0 +1,47 @@
+/*
+Autora:Livia Victoria 
+Nome do programa:Cruzamento 
+Data:20/02
+Descricao:criando um sistema de 2 semaforo
+*/
+
+#define pinLedVerdeA 11
+#define pinLedAmareloA 12
+#define pinLedVermelhoA  13
+#define pinLedVerdeB 2
+#define pinLedAmareloB 3
+#define pinLedVermelhoB  4
+#define tempoLigado 3000
+#define tempoLigado 2000
+#define tempoLigado 2000
+#define tempoLigado 3000
+#define tempoLigado 5000
+
+void setup()  //inicia
+{
+  pinMode(pinLedVerdeA,OUTPUT);
+  pinMode(pinLedAmareloA,OUTPUT);
+  pinMode(pinLedVermelhoA,OUTPUT);
+  pinMode(pinLedVermelhoB,OUTPUT);
+  pinMode(pinLedVerdeB,OUTPUT);
+  pinMode(pinLedAmareloB,OUTPUT);
+}
+
+void loop() //roda o codigo
+{
+  digitalWrite(pinLedVerdeA,HIGH);
+  digitalWrite(pinLedVermelhoB,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedVerdeA,LOW);
+  digitalWrite(pinLedAmareloA,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedAmareloA,LOW);
+  digitalWrite(pinLedVermelhoB,LOW);
+  digitalWrite(pinLedVerdeB,HIGH);
+  digitalWrite(pinLedVermelhoA,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedVerdeB,LOW);
+  digitalWrite(pinLedAmareloB,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedAmareloB,LOW);
+  digitalWrite(pinLedVermelhoA,LOW);
